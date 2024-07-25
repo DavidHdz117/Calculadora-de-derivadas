@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Derivadas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.1/math.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Derivadas</h1>
+        <form id="derivativeForm">
+            <label for="functionInput">Introduzca la función a derivar: </label>
+            <input type="text" id="functionInput" placeholder="Ej. 3x^2, 1/2x^3, -5x^-2, a*x^b" required>
+            <button type="button" onclick="calculateDerivative()">Calcular</button>
+            <button type="button" onclick="clearInputs()">Limpiar</button>
+        </form>
+        <div id="result">
+            <p>Resultado: <span id="derivativeOutput"></span></p>
+        </div>
+        <div id="plot"></div>
+    </div>
+</body>
+</html>
